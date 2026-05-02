@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services>
+    <service>
+        <id>1</id>
+        <title>قانون مدني</title>
+        <description>حل النزاعات المتعلقة بالعقود، العقارات، والمسائل المدنية.</description>
+        <icon>scale-balanced</icon>
+    </service>
+    <service>
+        <id>2</id>
+        <title>قانون جنائي</title>
+        <description>تقديم أفضل تمثيل قانوني في القضايا الجنائية المعقدة.</description>
+        <icon>gavel</icon>
+    </service>
+    <service>
+        <id>3</id>
+        <title>استشارات أسرية</title>
+        <description>دعم قانوني متخصص في مسائل الزواج، الطلاق، والميراث.</description>
+        <icon>users</icon>
+    </service>
+</services>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Project Report (P1-D3)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 { color: #2c3e50; text-align: center; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #2980b9; margin-top: 30px; }
+        h3 { color: #16a085; }
+        p { margin-bottom: 15px; }
+        ul { margin-bottom: 15px; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f2f2f2; font-weight: bold; }
+        .highlight { background-color: #fdfbfb; padding: 15px; border-left: 4px solid #f39c12; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Web Development Complete Report</h1>
+        <p><strong>Project:</strong> MIZAN Legal Services Platform</p>
+        
+        <h2>P1: Identify Dynamic Web Pages Terminologies</h2>
+        <p>Dynamic web pages are pages that display different content for different users while retaining the same layout and design. Key terminologies include:</p>
+        <ul>
+            <li><strong>DOM (Document Object Model):</strong> A programming interface for HTML and XML documents. It represents the page so that programs (like JavaScript) can change the document structure, style, and content.</li>
+            <li><strong>AJAX (Asynchronous JavaScript and XML):</strong> A technique using the XMLHttpRequest object to communicate with servers. It can send and receive information in various formats, including JSON, XML, HTML, and text files.</li>
+            <li><strong>Client-Side Scripting:</strong> Code that runs in the user's web browser (e.g., JavaScript).</li>
+            <li><strong>Server-Side Scripting:</strong> Code that runs on the web server (e.g., PHP, Node.js) to generate customized responses for each user.</li>
+            <li><strong>Web Server:</strong> Hardware or software that responds to client requests over the World Wide Web.</li>
+            <li><strong>Database:</strong> An organized collection of data, generally stored and accessed electronically from a computer system (e.g., MySQL used in MIZAN).</li>
+        </ul>
+
+        <h2>P2: Different Protocols and Backend Technologies</h2>
+        <h3>Protocols</h3>
+        <ul>
+            <li><strong>HTTP (Hypertext Transfer Protocol):</strong> The foundation of data communication for the World Wide Web, used for loading web pages via hypertext links.</li>
+            <li><strong>HTTPS (HTTP Secure):</strong> An extension of HTTP. It is used for secure communication over a computer network, widely used on the Internet.</li>
+            <li><strong>FTP (File Transfer Protocol):</strong> A standard network protocol used for the transfer of computer files between a client and server.</li>
+            <li><strong>WebSocket:</strong> A computer communications protocol, providing full-duplex communication channels over a single TCP connection.</li>
+        </ul>
+        <h3>Backend Technologies</h3>
+        <ul>
+            <li><strong>PHP:</strong> A widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML. (Used in this project)</li>
+            <li><strong>Node.js:</strong> An open-source, cross-platform, back-end JavaScript runtime environment that executes JavaScript code outside a web browser.</li>
+            <li><strong>Python (Django/Flask):</strong> High-level programming language used widely for robust and scalable backend systems.</li>
+            <li><strong>Ruby on Rails:</strong> A server-side web application framework written in Ruby.</li>
+        </ul>
+
+        <h2>M1: Javascript Techniques & Libraries to Enhance the Web</h2>
+        <p>Enhancing web connectivity and user experience relies heavily on modern JS techniques:</p>
+        <ul>
+            <li><strong>Fetch API / Axios:</strong> Used over older XMLHttpRequest for making HTTP requests to servers (AJAX). Fetch provides a better, more powerful, and flexible feature set.</li>
+            <li><strong>React / Vue.js:</strong> Frontend libraries/frameworks that allow developers to build encapsulated components that manage their own state, then compose them to make complex UIs efficiently using Virtual DOM calculations.</li>
+            <li><strong>jQuery:</strong> A fast, small, and feature-rich JavaScript library. While less common in new projects due to modern Vanilla JS features, it makes things like HTML document traversal and manipulation, event handling, and animation much simpler across a multitude of browsers.</li>
+            <li><strong>Asynchronous Programming (Async/Await):</strong> Helps write asynchronous, promise-based behavior in a cleaner style, avoiding "callback hell" and making code easily maintained.</li>
+        </ul>
+
+        <h2>M2 & M3: Cookies & Session for Web Connectivity</h2>
+        <div class="highlight">
+            <strong>Cookies vs. Sessions:</strong> HTTP is a stateless protocol, meaning each request is completely independent. Cookies and Sessions are used to persist data across multiple requests.
+        </div>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Cookies</th>
+                <th>Sessions</th>
+            </tr>
+            <tr>
+                <td>Storage Location</td>
+                <td>Stored on the client's browser as text files.</td>
+                <td>Stored on the web server.</td>
+            </tr>
+            <tr>
+                <td>Security</td>
+                <td>Less secure as data can be read/modified by the client.</td>
+                <td>More secure as data is hidden on the server (only a session ID is stored on client).</td>
+            </tr>
+            <tr>
+                <td>Capacity</td>
+                <td>Max 4KB per cookie.</td>
+                <td>Virtually unlimited (depends on server setup/memory).</td>
+            </tr>
+            <tr>
+                <td>Lifespan</td>
+                <td>Can persist even after the browser is closed (until expiration).</td>
+                <td>Typically ends when the user closes the browser.</td>
+            </tr>
+        </table>
+        <p><strong>Application in MIZAN Project:</strong> In the MIZAN system, Session (`$_SESSION`) is used to maintain the lawyer or client's logged-in status securely. A Cookie (`setcookie()`) has been implemented for the "Remember Me" feature, which keeps the user authenticated even if they close their browser and return later.</p>
+
+        <h2>D1: Differences Between Server-Side and Client-Side</h2>
+        <p>The distinction between Client-Side and Server-Side is fundamental to Web Architecture:</p>
+        <ul>
+            <li><strong>Client-Side (Frontend):</strong> Everything that the user visually sees and interacts with in their web browser. Technologies include HTML, CSS, and JavaScript. Processing happens on the user's local computer. It is responsible for UI presentation, form validation (immediate feedback), and dynamic visuals.</li>
+            <li><strong>Server-Side (Backend):</strong> The hidden infrastructure that powers the website. It consists of the server, a database, and server-side applications (PHP, Node API). Processing happens on a remote web server. It is responsible for business logic, database queries, authentication/authorization, and security.</li>
+        </ul>
+        <p><strong>Integration (D2):</strong> Modern dynamic websites bridge these two using AJAX/APIs. For example, in the MIZAN registration page, Client-Side JavaScript uses `fetch()` to send data to a Server-Side PHP script (`check_email.php`), which queries the database and returns a Server-Side response to be dynamically rendered on the Client-Side without reloading the page.</p>
+
+    </div>
+</body>
+</html>
